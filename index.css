@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar - Modern Dark Theme */
+.navbar {
+  background: #1e1e1e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.btn-primary {
+  background: #ff4b2b;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #e84118;
+}
+
+.btn-secondary {
+  background: white;
+  color: #ff4b2b;
+}
+
+.btn-secondary:hover {
+  background: #eee;
+}
+
+/* Modern Cards for Listing Medicines */
+.medicine-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.medicine-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.medicine-card:hover {
+  transform: scale(1.05);
+}
+
+.medicine-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.medicine-card h3 {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.medicine-card p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+/* Home Page Styling */
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
+              url('https://source.unsplash.com/qv70QHzT0cQ');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.hero-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #ff5722;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e64a19;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Default Page Styling */
+.page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Home Page */
+.home-page {
+  background-image: url('https://source.unsplash.com/qv70QHzT0cQ');
+}
+
+/* Donate Page */
+.donate-page {
+  background-image: url('https://source.unsplash.com/JTQWmB-ALo8');
+}
+
+/* Search Medicine Page */
+.search-medicine-page {
+  background-image: url('https://source.unsplash.com/W9OKrxBqiZA');
+}
+
+/* Profile Page */
+.profile-page {
+  background-image: url('https://source.unsplash.com/PxM8aeJbzvk');
+}
+
+/* Login & Register Page */
+.auth-page {
+  background-image: url('https://source.unsplash.com/Zt19gW9yRWI');
+}
+
+/* Page Overlay for Readability */
+.page-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
