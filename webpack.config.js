@@ -1,0 +1,1 @@
+// This file is intentionally empty to use Create React App's default webpack configuration
