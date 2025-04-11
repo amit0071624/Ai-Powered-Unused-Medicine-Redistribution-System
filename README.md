@@ -74,3 +74,9 @@ Final Year Project | BCA
 1. Email : admin77@gmail.com
 2. Password : venom
 
+📄 License
+This project is licensed under the MIT License.
+---
+If you give me your actual **GitHub username**, **project repo name**, or any logo or screenshot you'd like to include in the README, I can make it even more personal!
+Let me know when you're ready to upload it, I’ll help with the commands for pushing it to GitHub too! 💪
+
