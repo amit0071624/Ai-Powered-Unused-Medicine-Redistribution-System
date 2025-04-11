@@ -1,0 +1,103 @@
+.community-forum {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--card-bg-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition-medium);
+}
+
+.post-form textarea {
+  background: var(--input-background);
+  border: var(--input-border);
+  color: var(--input-text);
+  transition: all var(--transition-fast);
+}
+
+.post-form textarea:focus {
+  border-color: var(--primary-gradient);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.post-card {
+  background: var(--card-bg-light);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.post-author {
+  font-weight: 600;
+  color: var(--text-primary-light);
+}
+
+.post-timestamp {
+  color: var(--text-secondary-light);
+  font-size: var(--font-sm);
+}
+
+.post-content {
+  color: var(--text-primary-light);
+  line-height: 1.6;
+}
+
+.post-actions {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary-light);
+  transition: all var(--transition-fast);
+}
+
+.action-button:hover {
+  color: var(--text-primary-light);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.action-button.liked {
+  color: #ef4444;
+}
+
+.loading-spinner {
+  border: 3px solid rgba(99, 102, 241, 0.1);
+  border-top: 3px solid #6366f1;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .community-forum {
+    margin: var(--space-2);
+  }
+  
+  .post-actions {
+    flex-wrap: wrap;
+  }
+}

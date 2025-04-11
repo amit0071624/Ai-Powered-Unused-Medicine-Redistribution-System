@@ -1,0 +1,246 @@
+.sell-donate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f6f8fd 0%, #e9f0f9 100%);
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.progress-step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active .step-number {
+    background: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.step-title {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+}
+
+.progress-step.active .step-title {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.form-step {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.image-upload-container {
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.image-upload-container:hover {
+    border-color: #4CAF50;
+    background: rgba(76, 175, 80, 0.05);
+}
+
+.image-input {
+    display: none;
+}
+
+.image-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.image-upload-label svg {
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.image-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.prev-btn {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.prev-btn:hover {
+    background: #e0e0e0;
+}
+
+.next-btn,
+.submit-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.next-btn:hover,
+.submit-btn:hover {
+    background: #43a047;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .sell-donate-container {
+        padding: 1rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .step-title {
+        font-size: 0.75rem;
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+.medicine-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.medicine-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.medicine-list li {
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.medicine-image {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}

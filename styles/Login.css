@@ -1,0 +1,117 @@
+.login-container, .register-container {
+  background: var(--pattern);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-box, .register-box {
+  background: var(--card-bg-dark);
+  backdrop-filter: blur(10px);
+  border: var(--card-border);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 400px;
+  animation: fadeIn 0.5s ease-out;
+  color: var(--text-color);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  background: var(--input-background);
+  border: var(--input-border);
+  border-radius: 8px;
+  color: var(--input-text);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.login-btn, .google-btn, .mobile-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-btn {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.google-btn {
+  background: var(--secondary-gradient);
+  color: white;
+}
+
+.mobile-btn {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.login-btn:hover, .google-btn:hover, .mobile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.or-divider {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 20px 0;
+  position: relative;
+  font-weight: 500;
+}
+
+.or-divider::before, .or-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

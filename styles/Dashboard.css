@@ -1,0 +1,42 @@
+.dashboard-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+}
+
+/* User Profile Card */
+.profile-card {
+    border: 1px solid #444;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Listed Medicines */
+.medicine-card {
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    margin: 10px;
+    text-align: center;
+}
+
+.medicine-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+/* Order History */
+.order-history {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}

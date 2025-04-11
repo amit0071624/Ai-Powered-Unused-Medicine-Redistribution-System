@@ -1,0 +1,50 @@
+.payment-offers {
+  padding: 20px;
+}
+
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.payment-method-card {
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform var(--transition-fast);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.payment-method-card:hover {
+  transform: translateY(-5px);
+}
+
+.payment-method-card h4 {
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.payment-method-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-method-card ul li {
+  color: var(--text-color);
+  margin: 8px 0;
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.payment-method-card ul li::before {
+  content: '✨';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}

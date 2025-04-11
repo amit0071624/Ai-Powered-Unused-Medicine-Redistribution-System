@@ -1,0 +1,247 @@
+.profile-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--background-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--primary-color);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-avatar.edit-mode {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.profile-avatar.edit-mode:hover {
+  opacity: 0.8;
+}
+
+.image-input {
+  display: none;
+}
+
+.upload-label {
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+  background: var(--primary-color-dark);
+}
+
+.profile-header h1 {
+  margin: 1rem 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.profile-email {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--background-primary);
+  border-radius: 8px;
+}
+
+.info-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.info-item p {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.edit-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 2rem auto 0;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+  background: var(--primary-color-dark);
+}
+
+.profile-form {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--background-primary);
+  border-radius: 8px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--background-secondary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.save-button,
+.cancel-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.save-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.save-button:hover {
+  background: var(--primary-color-dark);
+}
+
+.cancel-button {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.cancel-button:hover {
+  background: var(--background-secondary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .info-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .save-button,
+  .cancel-button {
+    width: 100%;
+  }
+}

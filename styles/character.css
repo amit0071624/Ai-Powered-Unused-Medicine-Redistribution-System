@@ -1,0 +1,154 @@
+.medical-character {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.character-message {
+  position: absolute;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  z-index: 100;
+  color: #ffffff;
+}
+
+.character-message::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #1a1a1a transparent transparent;
+}
+
+.character-head {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: green;
+  border-radius: 50%;
+  animation: headBob 2s ease-in-out infinite;
+}
+
+.character-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.character-eye {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.character-eye.left {
+  left: 25%;
+  top: 40%;
+}
+
+.character-eye.right {
+  right: 25%;
+  top: 40%;
+}
+
+.character-smile {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 0 0 12px 12px;
+  border-top: 0;
+  animation: smile 2s ease-in-out infinite;
+}
+
+.character-body {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 50px;
+  background: var(--secondary-gradient);
+  border-radius: 20px 20px 10px 10px;
+  animation: bodyWiggle 2s ease-in-out infinite;
+}
+
+@keyframes headBob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+@keyframes blink {
+  0%, 45%, 55%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.1); }
+}
+
+@keyframes smile {
+  0%, 100% { transform: translateX(-50%) scaleX(1); }
+  50% { transform: translateX(-50%) scaleX(1.1); }
+}
+
+@keyframes bodyWiggle {
+  0%, 100% { transform: translateX(-50%) rotate(0deg); }
+  25% { transform: translateX(-50%) rotate(-3deg); }
+  75% { transform: translateX(-50%) rotate(3deg); }
+}
+
+/* Hover Effects */
+.medical-character:hover .character-head {
+  animation: excited 0.5s ease-in-out infinite;
+}
+
+.character-message {
+  opacity: 0;
+  visibility: hidden;
+  top: -100px;
+  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+}
+
+.character-message.show {
+  opacity: 1;
+  visibility: visible;
+  top: -80px;
+  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+}
+
+.medical-character:hover .character-smile {
+  animation: bigSmile 0.5s forwards;
+}
+
+@keyframes bigSmile {
+  to {
+    width: 28px;
+    height: 14px;
+  }
+}
+
+@keyframes excited {
+  0%, 100% { transform: translateX(-50%) rotate(0deg); }
+  25% { transform: translateX(-50%) rotate(-5deg); }
+  75% { transform: translateX(-50%) rotate(5deg); }
+}

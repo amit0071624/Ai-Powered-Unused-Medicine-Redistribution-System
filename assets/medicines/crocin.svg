@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Medicine Box -->
+    <rect x="40" y="60" width="120" height="80" rx="5" fill="#ff6b6b"/>
+    
+    <!-- Medicine Name -->
+    <text x="100" y="100" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">CROCIN</text>
+    <text x="100" y="120" font-family="Arial" font-size="12" fill="white" text-anchor="middle">ADVANCE</text>
+    
+    <!-- Decorative Elements -->
+    <rect x="45" y="65" width="110" height="70" rx="3" stroke="white" stroke-width="1" fill="none"/>
+    
+    <!-- Pills -->
+    <circle cx="60" cy="90" r="5" fill="white"/>
+    <circle cx="140" cy="90" r="5" fill="white"/>
+</svg>

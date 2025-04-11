@@ -1,0 +1,199 @@
+/* Modern Medical Theme 2.0 - Fresh and Professional */
+:root {
+  /* Primary Colors - Fresh Medical Palette */
+  --primary-gradient: linear-gradient(135deg, #4F46E5 0%, #2563EB 100%);
+  --secondary-gradient: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+  --accent-gradient: linear-gradient(135deg, #F43F5E 0%, #E11D48 100%);
+  
+  /* Background Elements */
+  --pattern-light: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0v40M0 20h40' stroke='%23E2E8F0' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  --pattern-dark: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0v40M0 20h40' stroke='%23334155' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  
+  /* Component Styling */
+  --card-bg-light: rgba(255, 255, 255, 0.9);
+  --card-bg-dark: rgba(15, 23, 42, 0.9);
+  --card-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --card-border: 1px solid rgba(148, 163, 184, 0.1);
+  --card-hover-transform: translateY(-12px) scale(1.02);
+  
+  /* Text Colors */
+  --text-primary-light: #1E293B;
+  --text-secondary-light: #475569;
+  --text-primary-dark: #F1F5F9;
+  --text-secondary-dark: #94A3B8;
+  
+  /* Font Scale */
+  --font-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
+  --font-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --font-lg: clamp(1.125rem, 1.075rem + 0.25vw, 1.25rem);
+  --font-xl: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+  --font-2xl: clamp(1.5rem, 1.45rem + 0.25vw, 1.875rem);
+  --font-3xl: clamp(1.875rem, 1.825rem + 0.25vw, 2.25rem);
+  
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Animations */
+  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Spacing */
+  --space-1: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+  --space-2: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+  --space-3: clamp(0.75rem, 0.7rem + 0.25vw, 1rem);
+  --space-4: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  --space-6: clamp(1.5rem, 1.45rem + 0.25vw, 1.75rem);
+  --space-8: clamp(2rem, 1.95rem + 0.25vw, 2.25rem);
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  background-image: url('../assets/medical-pattern.svg');
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  color: var(--text-color);
+  line-height: 1.7;
+  letter-spacing: -0.015em;
+  transition: background-color var(--transition-medium),
+              color var(--transition-medium);
+}
+
+/* Theme Variables */
+:root {
+  --bg-color: #F8FAFC;
+  --text-color: var(--text-primary-light);
+  --pattern: var(--pattern-light);
+  --card-background: var(--card-bg-light);
+  --input-background: rgba(241, 245, 249, 0.8);
+  --input-border: 1px solid rgba(148, 163, 184, 0.2);
+  --input-text: var(--text-primary-light);
+  --button-text: #FFFFFF;
+  --nav-bg: #FFFFFF;
+  --nav-text: var(--text-primary-light);
+  --nav-border: 1px solid rgba(148, 163, 184, 0.1);
+  --dropdown-bg: #FFFFFF;
+  --dropdown-hover: #F1F5F9;
+  --icon-color: #64748B;
+  --notification-badge: #EF4444;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+  --bg-color: #0F172A;
+  --text-color: var(--text-primary-dark);
+  --pattern: var(--pattern-dark);
+  --card-background: var(--card-bg-dark);
+  --input-background: rgba(30, 41, 59, 0.8);
+  --input-border: 1px solid rgba(148, 163, 184, 0.1);
+  --input-text: var(--text-primary-dark);
+  --nav-bg: #1E293B;
+  --nav-text: var(--text-primary-dark);
+  --nav-border: 1px solid rgba(148, 163, 184, 0.1);
+  --dropdown-bg: #1E293B;
+  --dropdown-hover: #334155;
+  --icon-color: #94A3B8;
+  --notification-badge: #DC2626;
+}
+
+/* Modern Card */
+.modern-card {
+  background: var(--card-background);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition-medium);
+}
+
+.modern-card:hover {
+  transform: var(--card-hover-transform);
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Interactive Buttons */
+.gradient-btn {
+  background: var(--primary-gradient);
+  color: var(--button-text);
+  border: none;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: var(--transition-fast);
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-btn:hover::after {
+  left: 100%;
+}
+
+/* Dynamic Background */
+.animated-bg {
+  background: var(--pattern);
+  animation: patternFloat 30s linear infinite;
+}
+
+@keyframes patternFloat {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+/* Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Input Styling */
+.modern-input {
+  background: var(--input-background);
+  border: var(--input-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  color: var(--input-text);
+  transition: all var(--transition-fast);
+}
+
+.modern-input:focus {
+  outline: none;
+  border-color: rgba(79, 70, 229, 0.4);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}

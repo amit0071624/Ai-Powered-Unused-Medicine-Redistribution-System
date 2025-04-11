@@ -1,0 +1,128 @@
+/* Background Styling */
+.register-container {
+    background: var(--pattern);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.register-box {
+    background: var(--card-bg-dark);
+    backdrop-filter: blur(10px);
+    border: var(--card-border);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Form Elements */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: var(--input-background);
+    border: var(--input-border);
+    border-radius: 8px;
+    color: var(--input-text);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Register Button */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: var(--primary-gradient);
+    color: white;
+    transition: all var(--transition-fast);
+    margin-bottom: 15px;
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Login Buttons */
+.social-login {
+    margin-top: 20px;
+}
+
+.google-btn, .mobile-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.google-btn {
+    background: var(--secondary-gradient);
+    color: white;
+}
+
+.mobile-btn {
+    background: var(--accent-gradient);
+    color: white;
+}
+
+.google-btn:hover, .mobile-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 20px;
+    color: var(--text-secondary-dark);
+    
+    a {
+        color: var(--text-primary-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all var(--transition-fast);
+    }
+    
+    a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+.login-link a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
