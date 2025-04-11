@@ -70,3 +70,7 @@ Amit Pandit
 Final Year Project | BCA
 📧 panditamit1604@gmail.com
 
+##Admin Credential
+1. Email : admin77@gmail.com
+2. Password : venom
+
